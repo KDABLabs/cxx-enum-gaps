@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+# SPDX-FileContributor: Nicolas Qiu Guichard <nicolas.guichard@kdab.com>
+#
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+[package]
+name = "cxx-enum-gaps"
+description = "cxx addon to avoid using _ arms when matching cxx shared enums"
+version = "0.1.0"
+edition = "2024"
+authors = ["Nicolas Qiu Guichard <nicolas.guichard@kdab.com>"]
+repository = "https://github.com/KDABLabs/cxx-enum-gaps"
+license = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+indexmap = "2.14.2"
+proc-macro2 = "1.0.107"
+quote = "1.0.47"
+syn = { version = "3.0.5", features = ["full"] }
+
+[dev-dependencies]
+cxx = "1.0.202"

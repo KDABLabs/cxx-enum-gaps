@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+# SPDX-FileContributor: Nicolas Qiu Guichard <nicolas.guichard@kdab.com>
+#
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+name: Nix Flake Check
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  nix-flake-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: DeterminateSystems/nix-installer-action@v23
+      - uses: DeterminateSystems/magic-nix-cache-action@v15
+      - run: nix flake check -L --keep-going

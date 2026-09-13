@@ -1,0 +1,7 @@
+version = 1
+
+# A simple glob of all files in resources/img/
+[[annotations]]
+path = "src/syntax/*"
+SPDX-FileCopyrightText = "2026 David Tolnay <dtolnay@gmail.com>"
+SPDX-License-Identifier = "MIT OR Apache-2.0"
